@@ -1,11 +1,8 @@
-Herramientas para pruebas en Javascript
+¿Qué es Jest?
 
--JS es uno de los lenguajes con mas frameworks para pruebas, pero con menos cultura en la comunidad.
+-Jest es una herramienta creada y mantenida por la comunidad open source con apoyo de Facebook. Jest surgió 
+    con el objetivo de agregar pruebas unitarias a proyectos con react pero ha sido tan importante que cada 
+    vez se emplea en mas proyectos con otros frameworks.
 
-Los más populares:
-    -Ava
-    -Tape
-    -Enzyme
-    -Jasmine
-    -Mocha
-    -Jest
+-Jest no requiere configuraciones adicionales demasiado complejas para añadir pruebas a cualquiera de nuestros 
+    proyectos.
