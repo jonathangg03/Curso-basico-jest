@@ -1,21 +1,11 @@
-¿Qué son las pruebas Unitarias?
+Herramientas para pruebas en Javascript
 
-Definición:
-    -Tomar todos los proyectos, o bloques de código, y descomponerlos en pequeñas partes que vamos a probar.
-    -Así, todo lo que vamos pasando, sabemos que está funcionando correctamente, y no hay ningún bug.
-    -No son perfectas, no aseguran que un proyecto no falle cuando llegue a producción.
+-JS es uno de los lenguajes con mas frameworks para pruebas, pero con menos cultura en la comunidad.
 
-Caracteristicas:
-    -Automatizables.
-    -Total cobertura: Debemos pasar por cada bloque escrito.
-    -Reusables: Podemos usarlas para probar otros bloques.
-    -Independientes: No pueden depender de otra prueba para funcionar.
-    -Rapidas de crear: Debe ser algo conciso que prueben algo muy particular.
-
-Ventajas:
-    -Proporcionan trabajo agil.
-    -Cálidad de código.
-    -Detectar errores rapido.
-    -Facilita cambios y favorece la integración.
-    -Proporciona info.
-    -Reduce costos.
+Los más populares:
+    -Ava
+    -Tape
+    -Enzyme
+    -Jasmine
+    -Mocha
+    -Jest
