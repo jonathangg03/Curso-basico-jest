@@ -1,8 +1,12 @@
-¿Qué es Jest?
+Instalación y configuración
 
--Jest es una herramienta creada y mantenida por la comunidad open source con apoyo de Facebook. Jest surgió 
-    con el objetivo de agregar pruebas unitarias a proyectos con react pero ha sido tan importante que cada 
-    vez se emplea en mas proyectos con otros frameworks.
+Instalación:
+    -La dependencia es jest.
+    -Es de desarollo.
+    -Sí vamos a usar ecms-6, debemos instalar babel-jest, babel-polyfill y babel-preset-env.
+    -Para instalar babel-jest, solamente se usa ese nombre (sin @).
+    -Tambien instalamos el core de babel.
+    -Se hace la conf. de babel, y solamente agregamos el preset-env.
 
--Jest no requiere configuraciones adicionales demasiado complejas para añadir pruebas a cualquiera de nuestros 
-    proyectos.
+NOTA: Estamos instalando solamente babel-jest y preset-env, para probar que ya el preset-env tiene el 
+    polifyll incorporado, sí hay algún problema lo corregimos posteriormente
