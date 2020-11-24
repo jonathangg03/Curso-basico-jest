@@ -1,12 +1,34 @@
-Instalación y configuración
+Creando nuestra primera prueba unitaria
 
-Instalación:
-    -La dependencia es jest.
-    -Es de desarollo.
-    -Sí vamos a usar ecms-6, debemos instalar babel-jest, babel-polyfill y babel-preset-env.
-    -Para instalar babel-jest, solamente se usa ese nombre (sin @).
-    -Tambien instalamos el core de babel.
-    -Se hace la conf. de babel, y solamente agregamos el preset-env.
+-Para nuestro caso, creamos una carpeta donde añadiremos las pruebas, conforme vamos haciendo el codigo. Esto
+    es opcional, ya que muchos dev. crean el proyecto, o un avance de este, y luego hacen las pruebas.
 
-NOTA: Estamos instalando solamente babel-jest y preset-env, para probar que ya el preset-env tiene el 
-    polifyll incorporado, sí hay algún problema lo corregimos posteriormente
+-La carpeta que tendrá las prubeas debe tener este nombre: __test__
+-Jest identificará esta carpeta, y correrá todas las pruebas que tenga, pero tambien puede correrlas de forma
+    individual.
+-Los archivos se llamarán igual que el archivo al que probarán, pero con extensión ".test.js".
+
+Creación de las pruebas:
+    -Importar las funciones que probaremos del archivo que las contienen.
+    -Metodo describe(): Aquí definiremos la prueba general a hacer. Sus parametros:
+        .1: La descripción de la prueba.
+        .2: Una función con la prueba.
+    -Metodo test(): Estará en la funcion de describe(), y aquí se hace especificamente la prueba a un bloque, 
+        tiene los mismos parametros. Su funcion tendrá la definición de cuales pruebas se harán.
+
+Pruebas:
+    -expect(): definimos el resultado que esperamos.
+        .Como parametro, ejecutamos la función deseada de las que importamos, que deseamos validar.
+        .Sí deseamos validar que el resultado de una función es el que esperamos, del resultado del expect
+            usamos el metodo .toBe(valor). Y sí el resultado de la función es el que colocamos en este 
+            metodo, pasará la prueba.
+
+Ejecución de prueba:
+    -El script test ejecutará jest. Corremos este script. 
+    -Por defecto correrá todo de la carpeta __test__.
+    -Para correr un archivo en especifico, lo especificamos en el script o al correr el script, despues del
+        nombre de dicho script.
+
+-En caso de fallo, nos indica donde está el fallo, el dato esperado y el recibido.
+-Sí npm da un fallo cuando la prueba falló, esto es porque cuando fallo, el programa se dejó de ejecutar.
+-En caso de querer hacer una validación de otra función, declaramos otro test, pero ahora usando otra func.
