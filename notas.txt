@@ -1,13 +1,8 @@
-Truthness / Verdadero
+Arrays
 
--CORRECCIÓN: Sí tenemos varios describe, y dentro un test diferente, los suite siempre se mostrará un suite, y 
-    varios test, porque el suite es el archivo que se esta corriendo.
-
--Recordar que al usar el .not antes del comparador, ese comparador se volverá negativo.
+-Export solo funciona para funciones, por lo que para exportar un array, lo declaramos, y lo retornamos dentro de
+    un array.
 
 Comparadores:
-    .toBeNull(): Se espera que el elemento del expect sea null.
-    .toBeTruthy(): Se espera que el elemento del expect sea true.
-    .toBeFalsy(): Se espera que el elemento del expect sea false.
-    .toBeUndefined(): Se espera que el elemento del expect sea undefined.
-    .not.toBeTruthy(): Se espera que el elemento del expect sea falso ("no verdadero").
+    .toContain(): Compara sí el array tiene el elemento que está como parametro.
+    .toHaveLength(): Compara sí el array tiene el mismo tamaño que el colocado aquí.
