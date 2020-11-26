@@ -1,8 +1,9 @@
-Arrays
+Coverage
 
--Export solo funciona para funciones, por lo que para exportar un array, lo declaramos, y lo retornamos dentro de
-    un array.
+-Coverage nos generará un reporte en el cual indica sí no se uso alguna función, o cuantas no se usaron.
+    .Nos generá una carpeta en la cual, sí abrimos el index.html, vemos un reporte más detallado, y podemos ver
+        el detalle de cada función sí damos click en ella.
 
-Comparadores:
-    .toContain(): Compara sí el array tiene el elemento que está como parametro.
-    .toHaveLength(): Compara sí el array tiene el mismo tamaño que el colocado aquí.
+-Para correr el coverage, se crea un escript que corra jest, con el flag --coverage.
+
+-De esta forma, hará un reporte con todas las pruebas de la carpeta __test__.
