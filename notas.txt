@@ -1,12 +1,18 @@
-Common Matchers / Comparadores Comunes
+Numbers
 
--Test Suites: Cada vez que usamos el describe(); dentro podrá tener varios test().
--Test: Donde se usó test(). Puede haber varias dentro de un suite.
+-Los test se pueden correr sin la necesidad de estar dentro de un describe, pero es buena practica añadir
+    una descripción.
 
-Comparadores comúnes:
-    -Usados para comparar 2 elementos.
-    -Los mas usados:
-        .toBe(): Se esperá que la ejecución de una función que sea parametro del expect, sea igual a lo que
-            este dentro de este metodo.
-        .toEqual(): Comparación entre lo que esta en el expect() y este metodo, pasará en caso de ser iguales.
-            .not.toEqual(): Negación de lo anterior, pasará sí son diferentes.
+-Nos puede funcionar para agrupar un conjunto de funciones del mismo tipo, como se hizo en la 1er practica.
+
+-Lo que este en el expect es lo que se comparará, contra lo que esté en el metodo que se utilice para la
+    comparación.
+
+-Estas pruebas nos ayudarán a saber donde estan nuestros errores.
+
+Comparadores:
+    .toBeGreaterThan(): Lo esperado será mayor que lo que este como parametro.
+    .toBeGreaterThanOrEqual(): Lo esperado será mayor o igual que lo que este como parametro.
+    .toBeLessThan(): Lo esperado será menor que lo que este como parametro.
+    .toBeLessThanOrEqual(): Lo esperado será menor o igual que lo que este como parametro.
+    .toBeCloseTo(): Lo esperado igual que lo que este como parametro, pero es usado para flotantes.
