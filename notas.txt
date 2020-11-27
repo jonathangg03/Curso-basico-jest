@@ -1,14 +1,14 @@
-Setup de pruebas
+Callbacks:
 
--Jest nos proporciona funciones auxiliares para mejorar el manejo de nuestras pruebas, esto significa. Que podremos 
-    correr funciones antes, durante o después de nuestras pruebas.
+Recordatorio: Una función que se pasa a otra función como parametro. Al invocar la función externa, tendrá a una
+    función como parametro, ese parametro es el callback.
+        .Sí la función callback tiene algún parametro, este se le pasa en la declaración de la función externa.
 
--Esto nos permite setear ciertas configuraciones muy particulares que necesitemos antes que corra la prueba o 
-    después de esta.
-
--No importa el momento en que estas funciones sean escritas, lo importante es cual tipo de función se correrá.
--Como parametro de los siguientes metodos será la función que ejecutaremos en el momento respectivo:
-    .afterEach(): Despues de cada prueba.
-    .afterAll(): Despues de todas las prueba.
-    .beforeEach(): Antes de cada prueba.
-    .beforeAll(): Antes de todas las pruebas.
+Sintaxis:
+    -La función del test tendrá un parametro, este es una función done.
+    -Dentro del test, declaramos la función que será el callback, y aquí dentro, se hará el expect.
+        .En el ejemplo, probaremos que el parametro de la función callback sea igual al que se le colocó en la 
+            declaración de la función externa.
+    -Al final de la prueba, invocamos a la función done(), esta  indica a Jest que se resolvió la función asincrona.
+    -Fuerá de esta función, invocamos la función externa, que tendrá este callback como parametro.
+    
