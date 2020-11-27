@@ -16,7 +16,9 @@
   ],
   "author": "Jonathan Garcia González <jona03g97@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.21.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.8",
     "@babel/preset-env": "^7.12.7",

@@ -1,14 +1,16 @@
-Callbacks:
+Promesas
 
-Recordatorio: Una función que se pasa a otra función como parametro. Al invocar la función externa, tendrá a una
-    función como parametro, ese parametro es el callback.
-        .Sí la función callback tiene algún parametro, este se le pasa en la declaración de la función externa.
+Axios:
+    -Para esta clase, para hacer la petición al API, usaremos la librería Axios, en lugar de fetch, porque Axios
+        siempre va a regresar promesas.
+    -El nombre de la librería es axios, al estar dentro del proyecto, no se usa como desarrollo.
+    -En la función que realiza la petición, retornaremos el metodo get() de axios, como parametro el url del api.
+    -Como se maneja con promesas, el then de este get, lo que hace es retornar la data, la cual es el parametro
+        de la func. del then, el parametro se coloca entre {}.
 
-Sintaxis:
-    -La función del test tendrá un parametro, este es una función done.
-    -Dentro del test, declaramos la función que será el callback, y aquí dentro, se hará el expect.
-        .En el ejemplo, probaremos que el parametro de la función callback sea igual al que se le colocó en la 
-            declaración de la función externa.
-    -Al final de la prueba, invocamos a la función done(), esta  indica a Jest que se resolvió la función asincrona.
-    -Fuerá de esta función, invocamos la función externa, que tendrá este callback como parametro.
-    
+Sintaxis de pruebas para promesas:
+    -En el test haremos la petición.
+    -Sí la promesa se resuelve exitosamente, en el then, podemos hacer pruebas con la data, la cual es el parametro
+        de la función del then.
+            .En el ejemplo, probamos que el tamaño del results de la petición sea mayor a 0.
+    -Ejecutamos el done(), para señalar la finalización.
