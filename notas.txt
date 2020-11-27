@@ -1,10 +1,14 @@
-Monitoreo
+Setup de pruebas
 
--Correremos las pruebas, y en caso de haber algun cambio en alguna prueba o archivo probado, se correran
-    automaticamente de nuevo las pruebas.
+-Jest nos proporciona funciones auxiliares para mejorar el manejo de nuestras pruebas, esto significa. Que podremos 
+    correr funciones antes, durante o después de nuestras pruebas.
 
--Se crea un script que corra jest con el flag --watch.
+-Esto nos permite setear ciertas configuraciones muy particulares que necesitemos antes que corra la prueba o 
+    después de esta.
 
--No se podrá correr un archivo por aparte, se corren todos a la vez.
-
--Al correr el script, da unas opciones, la que necesitamos por ahora para correr el monitoreo es "a".
+-No importa el momento en que estas funciones sean escritas, lo importante es cual tipo de función se correrá.
+-Como parametro de los siguientes metodos será la función que ejecutaremos en el momento respectivo:
+    .afterEach(): Despues de cada prueba.
+    .afterAll(): Despues de todas las prueba.
+    .beforeEach(): Antes de cada prueba.
+    .beforeAll(): Antes de todas las pruebas.
