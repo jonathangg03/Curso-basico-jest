@@ -1,9 +1,10 @@
-Strings
+Monitoreo
 
--En las comparaciones de texto, para ver sí tiene alguna palabra dentro de un string, la palabra se usa dentro de
-    "/palabra/".
+-Correremos las pruebas, y en caso de haber algun cambio en alguna prueba o archivo probado, se correran
+    automaticamente de nuevo las pruebas.
 
-Comparadores:
-    .toMatch(): Sí el string está como paramtro esta dentro del string que estará dentro del string del expect.
-    .not.toMatch(): Negativo a la anterior.
-    .toHaveLength(): Ver sí el string tiene el tamaño indicado como parametro.
+-Se crea un script que corra jest con el flag --watch.
+
+-No se podrá correr un archivo por aparte, se corren todos a la vez.
+
+-Al correr el script, da unas opciones, la que necesitamos por ahora para correr el monitoreo es "a".
