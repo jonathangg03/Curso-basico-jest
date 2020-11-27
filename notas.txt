@@ -1,9 +1,9 @@
-Coverage
+Strings
 
--Coverage nos generará un reporte en el cual indica sí no se uso alguna función, o cuantas no se usaron.
-    .Nos generá una carpeta en la cual, sí abrimos el index.html, vemos un reporte más detallado, y podemos ver
-        el detalle de cada función sí damos click en ella.
+-En las comparaciones de texto, para ver sí tiene alguna palabra dentro de un string, la palabra se usa dentro de
+    "/palabra/".
 
--Para correr el coverage, se crea un escript que corra jest, con el flag --coverage.
-
--De esta forma, hará un reporte con todas las pruebas de la carpeta __test__.
+Comparadores:
+    .toMatch(): Sí el string está como paramtro esta dentro del string que estará dentro del string del expect.
+    .not.toMatch(): Negativo a la anterior.
+    .toHaveLength(): Ver sí el string tiene el tamaño indicado como parametro.
