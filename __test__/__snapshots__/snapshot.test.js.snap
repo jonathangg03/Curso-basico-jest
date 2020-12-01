@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Es hora de las instantaneas Snapshoot 1`] = `
+Object {
+  "gender": "Male",
+  "id": 1,
+  "name": "Summer Smith",
+  "species": "Human",
+  "status": "Alive",
+}
+`;
