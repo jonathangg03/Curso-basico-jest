@@ -1,16 +1,13 @@
-Async-await
+Aplicaciones de testing para Async/Await
 
--Si dentro de un describe, tenemos varios test, solo pasará si todos pasan las pruebas.
+-Por convención, es mejor, sí vamos a usar el async await, no usar el .then, porque sería regundante, lo que 
+    haremos será guardar la resolución de la promesa en una variable.
 
--Podemos realizar las pruebas con async await de 2 formas, con .then o sin el.
-    1.Con .then: Al ejecutar la función, antes de la ejecución colocamos el await, de esa ejecución, en el .then 
-        haremos el expect.
-    2.Sin .then: En una variable esperamos la resolución de la funcion, esa variable tendrá los datos de salida de
-        la promesa, por lo que de ella hacemos el expect.
+-Para probar el resultado en caso de error, vamos a hacer petición a la API http://httpstat.us/404 (aquí colocamos
+    404, pero puede ser cualquier otro codigo). Ahorá, la petición a esta nos traerá un mensaje de error, por lo 
+    que podremos probar el resultado del rechazo de esta petición.
+        .El mensaje de error de esta api es: 'Request failed with status code 404' (o cualquier otro código).
+        .Para este caso, no esperamos la resolición de la promesa, sino, esperamos el expect.
 
-    .Al trabajar con async await, no es necesario usar el done.
-
--Al trabajar con async-await, hay 2 formas de que babel lo transpile para que funcione:
-    1. Instalar @babel/runtime y @babel/plugin-transform-runtime.
-    2. Dentro del array de presets, habrá otro array, ahí ingresamos los presets que teniamos configurados, y 
-        agregamos un objeto, cuyo objeto targets, tenga como valor de esmodules true.
+-En un test podemos tener varios expect, donde se prueben diferentes situaciones. Como ejemplo, probar que una 
+    promesa se resuelva tanto con error, como con exito.
