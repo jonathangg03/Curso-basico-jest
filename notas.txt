@@ -1,9 +1,16 @@
-Mejor explicacion de callbacks
+Async-await
 
--En el test, la función tendrá como parametro una funcion donde, la cual se ejecutará (sin params) al finalizar 
-    la prueba, para indicar que ahí termino la ejecución de la promesa.
+-Si dentro de un describe, tenemos varios test, solo pasará si todos pasan las pruebas.
 
--Dentro declaramos la funcion que será el callback, y aquí haremos el expect, con lo que queremos que esa funcion
-    que será el callback. Al finalizar la definicion del callback, ejecutamos el done.
+-Podemos realizar las pruebas con async await de 2 formas, con .then o sin el.
+    1.Con .then: Al ejecutar la función, antes de la ejecución colocamos el await, de esa ejecución, en el .then 
+        haremos el expect.
+    2.Sin .then: En una variable esperamos la resolución de la funcion, esa variable tendrá los datos de salida de
+        la promesa, por lo que de ella hacemos el expect.
 
--Despues de la definición del callback, ejecutamos la funcion que tendrá el callback.
+    .Al trabajar con async await, no es necesario usar el done.
+
+-Al trabajar con async-await, hay 2 formas de que babel lo transpile para que funcione:
+    1. Instalar @babel/runtime y @babel/plugin-transform-runtime.
+    2. Dentro del array de presets, habrá otro array, ahí ingresamos los presets que teniamos configurados, y 
+        agregamos un objeto, cuyo objeto targets, tenga como valor de esmodules true.
