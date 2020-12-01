@@ -1,9 +1,9 @@
-Reject y resolve
+Mejor explicacion de callbacks
 
--Podemos provar lo que nuestras promesas ejecutarán en caso de ser resueltas o rechazadas.
-    .Para probar las promesas, dentro de la prueba, ejecutamos la función, y dentro del then haremos el expect.
-        .Recordar hacer el done despues de esto.
-    .Podemos hacer dentro de otros test, pruebas para los resultados que tendrán resolve y reject, retornando el
-    expect y colocandole Promise.resolve/reject(valorProbado).
-            -.resolves.comparador(valorEsperado): Para probar el resolve.
-            -.rejects.comparador(valorEsperado): Para probar el reject.
+-En el test, la función tendrá como parametro una funcion donde, la cual se ejecutará (sin params) al finalizar 
+    la prueba, para indicar que ahí termino la ejecución de la promesa.
+
+-Dentro declaramos la funcion que será el callback, y aquí haremos el expect, con lo que queremos que esa funcion
+    que será el callback. Al finalizar la definicion del callback, ejecutamos el done.
+
+-Despues de la definición del callback, ejecutamos la funcion que tendrá el callback.
