@@ -1,16 +1,14 @@
-Preparar proyecto para trabajar con Vue
+Preparar proyecto para trabajar con Express JS
 
--Tanto Vue como react incluyen algunas pruebas al inicio, lo importante es saber que ambos usan Jest 
-    como su manejador de pruebas.
+-La dependencia supertest nos ayudará a correr la API en express.
+-Lo que vamos a probar es que al hacer una petición al servidor, el status Code sea 200.
 
--Con Vue, no es necesario crear la carpeta test, porque ya vendrá una por defecto con toda la conf.
-    .La carpeta specs tendrá las pruebas.
 
--La prueba la añadiremos al .specs que vendrá ahí.
-
--Como prueba, montaremos el componente y haremos una prueba de snapshot para que nos informe cuando algo
-    cambie.
-
--Para poder realizar las pruebas, es necesario indicarle a Vue que tome como servidor de pruebas el 
-    localhost, llendo a jest.config.js y agregando un elemento testURL, cuyo valor sea la direccion
-    del localhost.
+Pasos: 
+    -Importamos supertest y el archivo de la app que probaremos.
+    -Dentro del test, llamaremos a supertest, es un metodo que hara la petición, como parametro el app.
+        Esto tiene un metodo get, donde definimos de donde haremos el get, en nuestro caso, de la raíz.
+    -Esto devuelve una promesa, por lo que hacemos el then, y el parametro de su función tendrá la 
+        respuesta a la solicitud, por lo que podemos validar que el elemento statusCode de ese param.
+        sea igual al que esperamos.
+    -Recordar: Se esta trabajando con promesas, por lo que se usa el done().
