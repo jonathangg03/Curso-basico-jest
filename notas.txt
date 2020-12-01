@@ -1,26 +1,8 @@
-Snapshot Testing
+Excepciones Snapshot
 
--Los snapshots nos garantizan que vamos a asegurar, o que no vaya a pasar algún cambio inesperado en nuestra UI. 
-    Comprobamos lo que tenemos en este caso jest contra lo que estamos trayendo y que no deben de cambiar. Ya que 
-    esto lo usamos para casos en donde cierto datos en particulares rara vez deben de cambiar.
+-Existen datos que no siempre son estáticos, Al contrario. Están constantemente cambiando. Para ello necesitamos 
+    hacer ciertas excepciones.
 
--Ejemplo: Un icono que lo traigamos de alguna petición http. Entonces evaluaremos el cambio contra la prueba que 
-    tenemos en jest.
-
--Funcionamiento: Al traer datos, y correr por primera vez la prueba, guardamos la información exacta del dato que
-    estamos trayendo. Esto creará un archivo con esa información exacta la primera vez que ejecutemos la prueba.
-    En caso de que haya una alteración en los datos originales, sí corremos la prueba dará error, porque se 
-    comparará el Snapshot creado con la info de los datos originales. Podemos correr un comando para actualizar
-    el Snapshot con la información modificada.
-
--Como prueba, creamos un archivo .json, que en el objeto tendrá varios datos. La funcion que traera los datos,
-    retorna un objeto, del cual, los key serán igual que en el .json, y los value se sacaran del pram. de la 
-    func.
-
--Prueba:
-    .En el expect ejecutamos la función, como parametro, de donde sacaremos los datos.
-    .El comparador usado será .toMatchSnapshot();
-    .Al correrlo, por primera vez, se creará en la carpeta de pruebas el snapshot, la 2da vez hará la comparación,
-        donde pasará si los datos y el snapshot son iguales.
-    .En caso de alteración de los datos, si queremos gardar el snapshoot, corremos el comando: 
-        -npm test -- -u.
+-Para ello, al llamar la comparación del snapshot, le pasamos un objeto como parametro. Este tendrá como key el
+    nombre del elemento que estará cambiando, y como valor, expect.any(tipo), que indica que podrá tener cualquier
+    valor del tipo indicado.
