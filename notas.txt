@@ -1,29 +1,16 @@
-Preparar proyecto para trabajar con React JS
+Preparar proyecto para trabajar con Vue
 
--Usar create-react-app, la aplicación que se crea ya tiene pruebas, pero nos permite probar lo mimimo de
-    react, lo que haremos será instalar paquetes que nos ayuden a mejorar esas pruebas.
+-Tanto Vue como react incluyen algunas pruebas al inicio, lo importante es saber que ambos usan Jest 
+    como su manejador de pruebas.
 
--La prueba que realizaremos como ejemplo consiste en tomar un componente, y validar que el contenido de
-    una propiedad de la etiqueta con esa prop sea igual al que nosotros esperamos. La propiedad será la
-    que tendrá el contenido que mostrará la etiqueta.
+-Con Vue, no es necesario crear la carpeta test, porque ya vendrá una por defecto con toda la conf.
+    .La carpeta specs tendrá las pruebas.
 
--La carpeta __test__ la colocaremos dentro de src.
--Las dependencias enzyme y enzyme-adapter-react-16 ayudan a montar el componente sin necesidad de 
-    correrlo dentro de un navegador.
+-La prueba la añadiremos al .specs que vendrá ahí.
 
-Pasos iniciales:
-    -Demos importar react, el componente a probar.
-    -De la dependencia enzyme importamos Enzyme, y tambien 2 elementos de ella, mount y shadow.
-    -Importamos la dependencia enzyme-adapter-react-16, por convencion la importamos como Adapter.
-    -Debemos configurar Enzyme, para ello, usamos su metodo configure, y como parametro un objeto, cuyo
-        elemento adapter sea una instancia del Adapter.
+-Como prueba, montaremos el componente y haremos una prueba de snapshot para que nos informe cuando algo
+    cambie.
 
-Pasos de la prueba:
-    -Guardamos en una variable un objeto, cuyo atributo que deseamos probar le demos el valor deseado.
-    -Montar la variable anterior en el componente: En otra variable, guardamos el metodo mount. Como
-        parametro colocamos la etiqueta que usa el componente, y tendrá una propiedad, que es la
-        que deseamos probar, cuyo valor sea el elemento del objeto que creamos.
-    -Buscamos la etiqueta: Una variable tendrá como valor el metodo find() de la variable anterior, y 
-        tendrá como parametro, un string con la etiqueta que estamos buscando.
-    -En el expect, esperaremos que el metodo text() de esa variable, sea igual al texto que nosotros
-        deseamos.
+-Para poder realizar las pruebas, es necesario indicarle a Vue que tome como servidor de pruebas el 
+    localhost, llendo a jest.config.js y agregando un elemento testURL, cuyo valor sea la direccion
+    del localhost.
