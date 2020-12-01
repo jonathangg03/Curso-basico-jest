@@ -1,16 +1,9 @@
-Promesas
+Reject y resolve
 
-Axios:
-    -Para esta clase, para hacer la petición al API, usaremos la librería Axios, en lugar de fetch, porque Axios
-        siempre va a regresar promesas.
-    -El nombre de la librería es axios, al estar dentro del proyecto, no se usa como desarrollo.
-    -En la función que realiza la petición, retornaremos el metodo get() de axios, como parametro el url del api.
-    -Como se maneja con promesas, el then de este get, lo que hace es retornar la data, la cual es el parametro
-        de la func. del then, el parametro se coloca entre {}.
-
-Sintaxis de pruebas para promesas:
-    -En el test haremos la petición.
-    -Sí la promesa se resuelve exitosamente, en el then, podemos hacer pruebas con la data, la cual es el parametro
-        de la función del then.
-            .En el ejemplo, probamos que el tamaño del results de la petición sea mayor a 0.
-    -Ejecutamos el done(), para señalar la finalización.
+-Podemos provar lo que nuestras promesas ejecutarán en caso de ser resueltas o rechazadas.
+    .Para probar las promesas, dentro de la prueba, ejecutamos la función, y dentro del then haremos el expect.
+        .Recordar hacer el done despues de esto.
+    .Podemos hacer dentro de otros test, pruebas para los resultados que tendrán resolve y reject, retornando el
+    expect y colocandole Promise.resolve/reject(valorProbado).
+            -.resolves.comparador(valorEsperado): Para probar el resolve.
+            -.rejects.comparador(valorEsperado): Para probar el reject.
